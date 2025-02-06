@@ -29,6 +29,8 @@ class FunFactOfNumbers():
         
         armstrong_num = sum(int(num) ** num_of_digits for num in num_str)
 
+        return armstrong_num == n
+
     def is_perfect(self):
         n = self.number
 
