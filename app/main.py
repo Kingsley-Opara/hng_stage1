@@ -27,7 +27,8 @@ class FunFactOfNumbers():
         num_str = str(n)
         num_of_digits = len(num_str)
         
-        armstrong_num = sum(int(num) ** num_of_digits for num in num_str)
+        # armstrong_num = sum(int(num) ** num_of_digits for num in num_str)
+        armstrong_num = sum(int(digit) ** num_of_digits for digit in num_str)
 
         return armstrong_num == n
 
