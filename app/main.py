@@ -98,7 +98,11 @@ class FunFactOfNumbers():
 app = FastAPI()
 
 @app.get('/api/classify-number', status_code=200)
-def home(number: int):
+def home(number):
+    try:
+        number = int(number)
+    except:
+        return HTTPException(status_code=400, detail="b")
     if not isinstance(number, int):
         data = {
             "number": "alphabet",
