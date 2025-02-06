@@ -97,7 +97,7 @@ class FunFactOfNumbers():
         
 app = FastAPI()
 
-@app.get('api/classify-number', status_code=200)
+@app.get('/api/classify-number', status_code=200)
 def home(number):
     try:
         number = int(number)
