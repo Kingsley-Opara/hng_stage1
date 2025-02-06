@@ -103,10 +103,10 @@ app = FastAPI()
 @app.get('/api/classify-number', status_code=200)
 def home(number):
     try:
-        number = int(number)
+        number = abs(int(number))
     except:
-        return HTTPException(status_code=400, detail="b")
-    if not isinstance(number, int):
+            
+    
         data = {
             "number": "alphabet",
             "error": True
