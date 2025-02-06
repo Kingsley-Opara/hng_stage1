@@ -24,7 +24,7 @@ class FunFactOfNumbers():
     
     def is_armstrong(self):
         n = self.number
-        num_str = str(n)
+        num_str = str(n).replace("-", "")
         num_of_digits = len(num_str)
         
         # armstrong_num = sum(int(num) ** num_of_digits for num in num_str)
@@ -94,7 +94,7 @@ class FunFactOfNumbers():
 
     def digit_sum(self):
         n = self.number
-        n_to_list = str(n)
+        n_to_list = str(n).replace("-", "")
 
         return sum(int(i) for i in n_to_list)
         
@@ -103,7 +103,7 @@ app = FastAPI()
 @app.get('/api/classify-number', status_code=200)
 def home(number):
     try:
-        number = abs(int(number))
+        number = int(number)
     except:
             
     
